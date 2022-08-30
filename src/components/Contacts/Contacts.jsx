@@ -31,7 +31,13 @@ const Contacts = ({ removeContact, getFilteredConatcts, handleFilter }) => {
 
 Contacts.propTypes = {
   removeContact: PropTypes.func.isRequired,
-  getFilteredConatcts: PropTypes.func.isRequired,
+  getFilteredConatcts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
   handleFilter: PropTypes.func.isRequired,
 };
 

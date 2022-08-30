@@ -41,8 +41,9 @@ const App = () => {
     );
   };
 
-  const filterContacts = value => {
-    setFilter(value);
+  const filterContacts = event => {
+    // console.log(event.target);
+    setFilter(event.target.value);
   };
 
   return (
